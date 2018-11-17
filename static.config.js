@@ -1,4 +1,3 @@
-import axios from 'axios'
 import jdown from 'jdown'
 import chokidar from 'chokidar'
 import { reloadRoutes } from 'react-static/node'
@@ -17,8 +16,9 @@ export default {
     title: 'The Haunting U Podcast',
   }),
   getRoutes: async () => {
-    const { data: posts } = await axios.get('https://jsonplaceholder.typicode.com/posts')
-    const { episodes } = await jdown('content', {parseMd: false})
+    const { episodes, hosts, about, ghoulbox } = await jdown('content', {parseMd: false})
+    //Always sort in reverse order by slug. Slug must be numeric
+    episodes.sort((a,b) => b.slug - a.slug)
     return [
       {
         path: '/',
@@ -29,7 +29,24 @@ export default {
       },
       {
         path: '/about',
-        component: 'src/containers/About',
+        component: 'src/containers/Page',
+        getData: () => ({
+          content: about
+        }),
+      },
+      {
+        path: '/ghoulbox',
+        component: 'src/containers/Page',
+        getData: () => ({
+          content: ghoulbox
+        }),
+      },
+      {
+        path: '/hosts',
+        component: 'src/containers/Hosts',
+        getData: () => ({
+          hosts
+        }),
       },
       {
         path: '/podcasts',
@@ -44,20 +61,6 @@ export default {
             episode
           })
         }))
-      },
-      {
-        path: '/blog',
-        component: 'src/containers/Blog',
-        getData: () => ({
-          posts,
-        }),
-        children: posts.map(post => ({
-          path: `/post/${post.id}`,
-          component: 'src/containers/Post',
-          getData: () => ({
-            post,
-          }),
-        })),
       },
       {
         is404: true,

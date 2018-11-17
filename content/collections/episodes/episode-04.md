@@ -1,5 +1,5 @@
 ---
-slug: "episode-4"
+slug: 4
 title: "Episode 4 - Construction Techniques"
 date: "2017-08-26"
 overview: "Discover the tools and techniques needed to build your own home haunt"

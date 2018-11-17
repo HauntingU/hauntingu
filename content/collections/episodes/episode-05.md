@@ -1,5 +1,5 @@
 ---
-slug: "episode-5"
+slug: 5
 title: "Episode 5 - Advertising and Marketing"
 date: "2017-09-02"
 overview: "Explore ways you can advertise to maximize attendence at your haunt"

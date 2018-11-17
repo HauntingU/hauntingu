@@ -55,10 +55,8 @@ class App extends PureComponent {
             <nav>
               <Tabs className={classes.tabs} value={false} centered>
                 <Tab component={Link} to="/" label="Home" />
-                <Tab component={Link} to="/about" label="About" />
+                <Tab component={Link} to="/about" label="About Us" />
                 <Tab component={Link} to="/podcasts" label="Podcasts" />
-                <Tab component={Link} to="/articles" label="Articles" />
-                <Tab component={Link} to="/hosts" label="Hosts" />
                 <Tab component={Link} to="/ghoulbox" label="Haunter's Ghoulbox" />
               </Tabs>
             </nav>

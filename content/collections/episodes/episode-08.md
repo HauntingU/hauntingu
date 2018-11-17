@@ -1,5 +1,5 @@
 ---
-slug: "episode-8"
+slug: 8
 title: "Episode 8 - WCHC Wrap-Up"
 date: "2018-05-01"
 overview: "A summary of our time spent at the West Coast Haunters Convention"

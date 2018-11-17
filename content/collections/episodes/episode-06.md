@@ -1,5 +1,5 @@
 ---
-slug: "episode-6"
+slug: 6
 title: "Episode 6 - Actors, Costumes, and Makeup"
 date: "2017-09-02"
 overview: "Learn  how to recruit and utilze scare actors during your haunt"

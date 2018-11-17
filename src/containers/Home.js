@@ -28,8 +28,8 @@ export default withRouteData(({episodes}) => (
         <Grid container justify="center">
           <Grid item xs={12} md={8} lg={9}>
             <Grid container justify="space-evenly" spacing={16}>
-              {episodes.map(episode => (
-                <Grid item>
+              {episodes.slice(0,6).map(episode => (
+                <Grid item key={episode.slug}>
                   <PodcastCard podcast={episode}/>
                 </Grid>
               ))}

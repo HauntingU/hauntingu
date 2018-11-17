@@ -1,5 +1,5 @@
 ---
-slug: "episode-2"
+slug: 2
 title: "Episode 2 - Theme and Backstory"
 date: "2017-07-07"
 overview: "Explore the importance of deciding on your theme and developing a compelling backstory."

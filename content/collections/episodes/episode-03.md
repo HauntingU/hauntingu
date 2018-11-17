@@ -1,5 +1,5 @@
 ---
-slug: "episode-3"
+slug: 3
 title: "Episode 3 - Layout"
 date: "2017-07-21"
 overview: "Explore how you can take your home-based haunted house to the next level as we describe how we created the Arkham Asylum Haunted House"

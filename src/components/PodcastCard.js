@@ -19,7 +19,6 @@ const styles = {
 };
 
 function PodcastCard({ classes, podcast}) {
-  console.log(podcast)
   return (
     <Card className={classes.card}>
       <CardActionArea>
