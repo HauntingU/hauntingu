@@ -1,11 +1,11 @@
 ---
 slug: 4
-title: "Episode 4 - Construction Techniques"
+title: "Construction Techniques"
 date: "2017-08-26"
 summary: "Discover the tools and techniques needed to build your own home haunt"
-season: "Season 1"
 duration: "61 mins"
-file: "../podcasts/Episode_1-Introduction.mp3"
+image: "/images/episode-04.jpg"
+file: "/podcasts/Episode_4_Construction_Techniques.mp3"
 hosts:
 - keoni
 - john

@@ -1,11 +1,11 @@
 ---
 slug: 6
-title: "Episode 6 - Actors, Costumes, and Makeup"
+title: "Actors, Costumes, and Makeup"
 date: "2017-09-02"
 summary: "Learn  how to recruit and utilze scare actors during your haunt"
-season: "Season 1"
 duration: "46 mins"
-file: "../podcasts/Episode_1-Introduction.mp3"
+image: "/images/episode-06.jpg"
+file: "/podcasts/Episode_6_Scareactors_Costumes_Makeup.mp3"
 hosts:
 - keoni
 - john

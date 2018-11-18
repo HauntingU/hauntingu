@@ -6,5 +6,8 @@ export default {
   },
   palette: {
     type: 'dark',
+    primary: {
+      main: '#fc8c54'
+    }
   },
 }

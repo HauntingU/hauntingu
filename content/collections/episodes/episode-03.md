@@ -1,11 +1,11 @@
 ---
 slug: 3
-title: "Episode 3 - Layout"
+title: "Layout"
 date: "2017-07-21"
 overview: "Explore how you can take your home-based haunted house to the next level as we describe how we created the Arkham Asylum Haunted House"
-season: "Season 1"
 duration: "38 mins"
-file: "../podcasts/Episode_1-Introduction.mp3"
+image: "/images/episode-03.jpg"
+file: "/podcasts/Episode_3_Layout.mp3"
 hosts:
 - keoni
 - john

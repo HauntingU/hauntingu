@@ -1,11 +1,11 @@
 ---
 slug: 5
-title: "Episode 5 - Advertising and Marketing"
+title: "Advertising and Marketing"
 date: "2017-09-02"
 summary: "Explore ways you can advertise to maximize attendence at your haunt"
-season: "Season 1"
 duration: "55 mins"
-file: "../podcasts/Episode_1-Introduction.mp3"
+image: "/images/episode-05.jpg"
+file: "/podcasts/Episode_5_-Advertising_Marketing.mp3"
 hosts:
 - keoni
 - john

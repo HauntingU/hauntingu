@@ -25,11 +25,11 @@ export default withRouteData(({episodes}) => (
     <img src={logoImg} alt="" style={{ display: 'block', width: '100%' }} />
     <Grid container justify="center" spacing={16} style={{padding: '1rem 0 1rem 1rem', margin: -16}}>
       <Grid item xs={12} lg={10}>
-        <Grid container justify="center">
+        <Grid container justify="center" spacing={16}>
           <Grid item xs={12} md={8} lg={9}>
-            <Grid container justify="space-evenly" spacing={16}>
+            <Grid container justify="flex-start" alignItems="stretch" spacing={16}>
               {episodes.slice(0,6).map(episode => (
-                <Grid item key={episode.slug}>
+                <Grid item key={episode.slug} xs={12} md={6} lg={4}>
                   <PodcastCard podcast={episode}/>
                 </Grid>
               ))}

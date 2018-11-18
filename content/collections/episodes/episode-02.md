@@ -1,11 +1,11 @@
 ---
 slug: 2
-title: "Episode 2 - Theme and Backstory"
+title: "Theme and Backstory"
 date: "2017-07-07"
 overview: "Explore the importance of deciding on your theme and developing a compelling backstory."
-season: "Season 1"
 duration: "30 mins"
-file: "../podcasts/Episode_1-Introduction.mp3"
+image: "/images/episode-02.jpg"
+file: "/podcasts/Episode_2-Theme_Backstory.mp3"
 hosts:
 - keoni
 - john

@@ -1,9 +1,8 @@
 ---
 slug: 1
-title: "Episode 1 - Introduction"
+title: "Introduction"
 date: "2017-07-01"
 summary: "Join us as we explore our experiences operating home-based haunted houses."
-season: "Season 1"
 duration: "27 mins"
 image: "/images/episode-01.png"
 file: "/podcasts/Episode_1-Introduction.mp3"
