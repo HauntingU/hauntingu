@@ -5,7 +5,7 @@ date: "2018-11-12"
 summary: "Nothing but the pure, raw, uncut, unedited, unmitigated, unfiltered, unreasonable, uncooked, unorthodox, uncrocked ramblings of your favorite hosts"
 duration: ""
 image: "/images/episode-16.jpg"
-file: "/podcasts/"
+file: "/podcasts/Episode_16-Haunted_Ship_Storyline_Brainstorming_Session.mp3"
 hosts:
 - keoni
 - john

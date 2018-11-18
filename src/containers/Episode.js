@@ -1,5 +1,4 @@
 import React from 'react'
-import convert from 'htmr'
 import { withRouteData, Link } from 'react-static'
 import { Redirect } from 'react-router';
 import Typography from '@material-ui/core/Typography'

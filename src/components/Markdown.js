@@ -37,6 +37,13 @@ const renderers = {
 
     return <Typography {...props} gutterBottom variant={variant} />
   },
+  tableCell: ({children}) => {
+    return (
+      <td>
+        <Typography>{children}</Typography>
+      </td>
+    )
+  },
   html: ({value}) => {
     return parser.parse(value);
   },

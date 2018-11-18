@@ -1,14 +1,13 @@
 import React, { PureComponent } from 'react'
 import { Router, Link } from 'react-static'
 import { hot } from 'react-hot-loader'
-//
 import Routes from 'react-static-routes'
-
 import CssBaseline from '@material-ui/core/CssBaseline'
 import AppBar from '@material-ui/core/AppBar'
 import Tabs from '@material-ui/core/Tabs'
 import Tab from '@material-ui/core/Tab'
 import { withStyles } from '@material-ui/core/styles'
+import { FaFacebook, FaTwitter } from 'react-icons/fa';
 
 // Custom styles
 const styles = {
@@ -47,6 +46,8 @@ class App extends PureComponent {
         <div className={classes.container} style={{display: 'flex', flexDirection: 'column', minHeight: '100vh'}}>
           <CssBaseline />
           <div style={{textAlign: 'center', background: '#111111', padding: '2rem 1rem'}}>
+            <a target="_blank" href='https://www.facebook.com/HauntingU/'><FaFacebook size='2.5em' style={{float: 'right', color: '#fff', padding: 8}}/></a>
+            <a target="_blank" href='https://twitter.com/hauntinguniver1'><FaTwitter size='2.5em' style={{float: 'right', color: '#fff', padding: 8}}/></a>
             <header style={{textAlign: 'center', display: 'inline-block', fontSize: '1.35em', color: '#fff'}}>
               <span style={{textAlign: 'left', display: 'block'}}>The</span>
               <span style={{display: 'block', fontSize: '2.25em', color: '#fc8c54'}}>Haunting U</span>

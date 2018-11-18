@@ -35,7 +35,7 @@ class PodcastCard extends React.Component {
   }
 
   render() {
-    const {classes, podcast} = this.props
+    const {classes, podcast, setEpisode} = this.props
     const {redirect} = this.state
     return redirect ? (<Redirect push to={redirect} />) : (
       <Card className={classes.card}>
@@ -55,7 +55,7 @@ class PodcastCard extends React.Component {
           </CardContent>
         </CardActionArea>
         <CardActions>
-          <IconButton aria-label="Play/pause">
+          <IconButton aria-label="Play/pause" onClick={() => setEpisode(podcast)}>
             <PlayArrowIcon className={classes.playIcon} />
           </IconButton>
           <Typography color="primary">
