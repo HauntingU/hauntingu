@@ -14,13 +14,31 @@ class Episode extends React.Component {
     super(props)
     this.state = {}
   }
-  handleOnClick = () => {
-    this.setState({redirect: true});
+  handleOnClick = (slug) => {
+    this.setState({redirect: `/about#${slug}`});
+  }
+  getHostChips = () => {
+    if (this.props.episode.hosts) {
+      return this.props.episode.hosts.map(slug => {
+        const host = this.props.hosts.find(h => h.slug === slug)
+        return (
+          <Chip
+            key={host.slug}
+            avatar={<Avatar alt={host.name} src={host.image} />}
+            label={host.name}
+            onClick={() => this.handleOnClick(host.slug)}
+            style={{margin: 8}}
+          />
+        )
+      })
+    }
+    else
+      return null
   }
   render() {
     const { episode } = this.props
     const { redirect } = this.state
-    return redirect ? (<Redirect push to="/" />) : (
+    return redirect ? (<Redirect push to={redirect} />) : (
       <Grid item xs={12}>
         <Grid container justify="center" spacing={16}>
           <Grid item xs={6}>
@@ -30,24 +48,7 @@ class Episode extends React.Component {
             <Typography variant="h5" gutterBottom>
               Hosts
             </Typography>
-            <Chip
-              avatar={<Avatar alt="John" src="/images/podcast-default.jpg" />}
-              label="John"
-              onClick={this.handleOnClick}
-              style={{margin: 8}}
-            />
-            <Chip
-              avatar={<Avatar alt="Keoni" src="/images/podcast-default.jpg" />}
-              label="Keoni"
-              onClick={this.handleOnClick}
-              style={{margin: 8}}
-            />
-            <Chip
-              avatar={<Avatar alt="Leslie" src="/images/podcast-default.jpg" />}
-              label="Leslie"
-              onClick={this.handleOnClick}
-              style={{margin: 8}}
-            />
+            {this.getHostChips()}
             <Markdown source={episode.contents}/>
           </Grid>
         </Grid>

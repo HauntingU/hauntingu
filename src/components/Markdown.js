@@ -1,16 +1,22 @@
 import React from 'react'
 import ReactMarkdown from 'react-markdown'
+import htmlParser from 'react-markdown/plugins/html-parser'
 import { withStyles } from '@material-ui/core/styles'
 import Typography from '@material-ui/core/Typography'
+import HtmlToReact from 'html-to-react';
+
+const parser = new HtmlToReact.Parser()
 
 const styles = theme => ({
   listItem: {
     marginTop: theme.spacing.unit,
   },
 })
+const parseHtml = htmlParser({
+  isValidNode: node => node.type !== 'script',
+})
 
 const renderers = {
-  /* eslint-disable-next-line react/prop-types */
   heading: ({ level, ...props }) => {
     let variant
 
@@ -31,7 +37,9 @@ const renderers = {
 
     return <Typography {...props} gutterBottom variant={variant} />
   },
-  html: () => null,
+  html: ({value}) => {
+    return parser.parse(value);
+  },
   listItem: withStyles(styles)(({ classes, tight, ...props }) => (
     <li className={classes.listItem}>
       <Typography component="span" {...props} />
@@ -40,6 +48,6 @@ const renderers = {
   paragraph: props => <Typography {...props} paragraph />,
 }
 
-export default function Markdown(props) {
-  return <ReactMarkdown renderers={renderers} {...props} />
+export default function Markdown({children, ...props}) {
+  return [children, (<ReactMarkdown renderers={renderers} {...props} />)]
 }

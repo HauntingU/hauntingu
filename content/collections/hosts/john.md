@@ -1,6 +1,7 @@
 ---
 slug: john
 name: John
+image: /images/podcast-default.jpg
 ---
 Who doesn't love a pink dolphin?
  

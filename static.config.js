@@ -16,7 +16,7 @@ export default {
     title: 'The Haunting U Podcast',
   }),
   getRoutes: async () => {
-    const { episodes, hosts, about, ghoulbox } = await jdown('content', {parseMd: false})
+    const { articles, episodes, hosts, about } = await jdown('content', {parseMd: false})
     //Always sort in reverse order by slug. Slug must be numeric
     episodes.sort((a,b) => b.slug - a.slug)
     return [
@@ -29,36 +29,41 @@ export default {
       },
       {
         path: '/about',
-        component: 'src/containers/Page',
-        getData: () => ({
-          content: about
-        }),
-      },
-      {
-        path: '/ghoulbox',
-        component: 'src/containers/Page',
-        getData: () => ({
-          content: ghoulbox
-        }),
-      },
-      {
-        path: '/hosts',
         component: 'src/containers/Hosts',
         getData: () => ({
-          hosts
+          hosts,
+          about
         }),
       },
       {
         path: '/podcasts',
         component: 'src/containers/Podcasts',
         getData: () => ({
-          episodes
+          episodes,
+          hosts
         }),
         children: episodes.map(episode => ({
           path: `/episode/${episode.slug}`,
           component: 'src/containers/Episode',
           getData: () => ({
-            episode
+            episode,
+            hosts
+          })
+        }))
+      },
+      {
+        path: '/articles',
+        component: 'src/containers/Articles',
+        getData: () => ({
+          articles,
+          hosts
+        }),
+        children: articles.map(article => ({
+          path: `/article/${article.slug}`,
+          component: 'src/containers/Page',
+          getData: () => ({
+            content: article,
+            hosts
           })
         }))
       },

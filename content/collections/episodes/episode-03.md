@@ -6,6 +6,9 @@ overview: "Explore how you can take your home-based haunted house to the next le
 season: "Season 1"
 duration: "38 mins"
 file: "../podcasts/Episode_1-Introduction.mp3"
+hosts:
+- keoni
+- john
 ---
 
 The third episode in our series exploring taking your home-based haunted house to the next level. 

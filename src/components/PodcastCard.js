@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Redirect } from 'react-router';
 import { withStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
@@ -18,34 +19,46 @@ const styles = {
   },
 };
 
-function PodcastCard({ classes, podcast}) {
-  return (
-    <Card className={classes.card}>
-      <CardActionArea>
-        <CardMedia
-          className={classes.media}
-          image={podcast.image || '/images/podcast-default.jpg'}
-          title={podcast.title}
-        />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
-            {podcast.title}
-          </Typography>
-          <Typography component="p">
-            {podcast.overview}
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-      <CardActions>
-        <Button size="small" color="primary">
-          Share
-        </Button>
-        <Button size="small" color="primary">
-          Learn More
-        </Button>
-      </CardActions>
-    </Card>
-  );
+class PodcastCard extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {}
+  }
+  handleOnClick = (slug) => {
+    this.setState({redirect: `/podcasts/episode/${slug}`});
+  }
+
+  render() {
+    const {classes, podcast} = this.props
+    const {redirect} = this.state
+    return redirect ? (<Redirect push to={redirect} />) : (
+      <Card className={classes.card}>
+        <CardActionArea onClick={() => this.handleOnClick(podcast.slug)}>
+          <CardMedia
+            className={classes.media}
+            image={podcast.image || '/images/podcast-default.jpg'}
+            title={podcast.title}
+          />
+          <CardContent>
+            <Typography gutterBottom variant="h5" component="h2">
+              {podcast.title}
+            </Typography>
+            <Typography component="p">
+              {podcast.summary}
+            </Typography>
+          </CardContent>
+        </CardActionArea>
+        <CardActions>
+          <Button size="small" color="primary">
+            Share
+          </Button>
+          <Button size="small" color="primary">
+            Learn More
+          </Button>
+        </CardActions>
+      </Card>
+    );
+  }
 }
 
 PodcastCard.propTypes = {

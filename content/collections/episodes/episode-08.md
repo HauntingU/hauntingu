@@ -2,10 +2,14 @@
 slug: 8
 title: "Episode 8 - WCHC Wrap-Up"
 date: "2018-05-01"
-overview: "A summary of our time spent at the West Coast Haunters Convention"
+summary: "A summary of our time spent at the West Coast Haunters Convention"
 season: "Season 1"
 duration: "47 mins"
 file: "../podcasts/Episode_1-Introduction.mp3"
+hosts:
+- keoni
+- john
+- leslie
 ---
 
 A summary of our time spent at the West Coast Haunters Convention.  Includes interviews with several vendors and guest speakers.

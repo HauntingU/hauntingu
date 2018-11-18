@@ -39,10 +39,12 @@ class App extends PureComponent {
 
   render () {
     const { classes } = this.props
+    const date = new Date();
+    const year = date.getUTCFullYear();
 
     return (
       <Router>
-        <div className={classes.container}>
+        <div className={classes.container} style={{display: 'flex', flexDirection: 'column', minHeight: '100vh'}}>
           <CssBaseline />
           <div style={{textAlign: 'center', background: '#111111', padding: '2rem 1rem'}}>
             <header style={{textAlign: 'center', display: 'inline-block', fontSize: '1.35em', color: '#fff'}}>
@@ -57,12 +59,15 @@ class App extends PureComponent {
                 <Tab component={Link} to="/" label="Home" />
                 <Tab component={Link} to="/about" label="About Us" />
                 <Tab component={Link} to="/podcasts" label="Podcasts" />
-                <Tab component={Link} to="/ghoulbox" label="Haunter's Ghoulbox" />
+                <Tab component={Link} to="/articles" label="Articles" />
               </Tabs>
             </nav>
           </AppBar>
-          <div className={classes.content}>
+          <div className={classes.content} style={{flex: 1}}>
             <Routes />
+          </div>
+          <div style={{height: 64, backgroundColor: '#111111', textAlign: 'center', verticalAlign: 'middle', fontSize: '1em', color: '#fff', padding: '1.25em'}}>
+            &copy; {`${year} Rocky Mountain Home Haunters. All rights reserved.`}
           </div>
         </div>
       </Router>

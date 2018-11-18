@@ -1,7 +1,9 @@
 ---
 slug: keoni
 name: Keoni
+image: /images/keoni.jpg
 ---
+
 The real blood from Harley's hammer really added to the atmosphere.
  
 Keoni started haunting when he was 12 years old by jumping out of the bushes in his parent’s yard 

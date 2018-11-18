@@ -6,6 +6,9 @@ overview: "Explore the importance of deciding on your theme and developing a com
 season: "Season 1"
 duration: "30 mins"
 file: "../podcasts/Episode_1-Introduction.mp3"
+hosts:
+- keoni
+- john
 ---
 
 The guiding light behind your decisions.  Come explore the importance of deciding on your theme, and developing a compelling backstory to support the theme.

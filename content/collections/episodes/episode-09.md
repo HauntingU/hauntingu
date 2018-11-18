@@ -2,9 +2,13 @@
 slug: 9
 title: "Episode 9 - Lighting"
 date: "2018-05-07"
-overview: "A discussion of lighting design for your haunt.  "
+summary: "A discussion of lighting design for your haunt.  "
 duration: "52 mins"
 file: "/podcasts/Episode_1-Introduction.mp3"
+hosts:
+- keoni
+- john
+- leslie
 ---
 
 ## Summary
