@@ -46,9 +46,11 @@ class App extends PureComponent {
         <div className={classes.container} style={{display: 'flex', flexDirection: 'column', minHeight: '100vh'}}>
           <CssBaseline />
           <div style={{textAlign: 'center', background: '#111111', padding: '2rem 1rem'}}>
-            <a target="_blank" href='https://www.facebook.com/HauntingU/'><FaFacebook size='2.5em' style={{float: 'right', color: '#fff', padding: 8}}/></a>
-            <a target="_blank" href='https://twitter.com/hauntinguniver1'><FaTwitter size='2.5em' style={{float: 'right', color: '#fff', padding: 8}}/></a>
-            <a target="_blank" href='/feed.xml'><FaRss size='2.5em' style={{float: 'right', color: '#fff', padding: 8}}/></a>
+            <ul style={{position: 'absolute', right: 8, top: 0}}>
+              <li style={{display: 'inline'}}><a target="_blank" href='https://www.facebook.com/HauntingU/'><FaFacebook size='2.5em' style={{float: 'right', color: '#fff', padding: 8}}/></a></li>
+              <li style={{display: 'inline'}}><a target="_blank" href='https://twitter.com/hauntinguniver1'><FaTwitter size='2.5em' style={{float: 'right', color: '#fff', padding: 8}}/></a></li>
+              <li style={{display: 'inline'}}><a target="_blank" href='/feed.xml'><FaRss size='2.5em' style={{float: 'right', color: '#fff', padding: 8}}/></a></li>
+            </ul>
             <header style={{textAlign: 'center', display: 'inline-block', fontSize: '1.35em', color: '#fff'}}>
               <span style={{textAlign: 'left', display: 'block'}}>The</span>
               <span style={{display: 'block', fontSize: '2.25em', color: '#fc8c54'}}>Haunting U</span>
@@ -59,8 +61,8 @@ class App extends PureComponent {
             <nav>
               <Tabs className={classes.tabs} value={false} centered>
                 <Tab component={Link} to="/" label="Home" />
-                <Tab component={Link} to="/about" label="About Us" />
-                <Tab component={Link} to="/podcasts" label="Podcasts" />
+                <Tab component={Link} to="/about" label="About" />
+                <Tab component={Link} to="/podcasts" label="Episodes" />
                 <Tab component={Link} to="/articles" label="Articles" />
               </Tabs>
             </nav>

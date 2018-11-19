@@ -11,15 +11,19 @@ import theme from './src/theme'
 
 chokidar.watch('content').on('all', () => reloadRoutes())
 
-const date = new Date();
-const year = date.getUTCFullYear();
-const prefix = "http://localhost:3000"
+const pubDate = new Date();
+const year = pubDate.getUTCFullYear();
+const siteRoot = "http://localhost:3000"
 const getSiteData = () => ({
   title: 'Haunting U',
+  pubDate
+})
+const getPodcastData = () => ({
+  ...getSiteData(),
   description: "A podcast by home-haunters for home haunters.  Let us help you take your home based haunted house to the next level.",
-  feedUrl: `${prefix}/feed.xml` ,
-  siteUrl: `${prefix}`,
-  imageUrl: `${prefix}/images/podcast-default.jpg`,
+  feedUrl: `${siteRoot}/feed.xml` ,
+  siteUrl: `${siteRoot}`,
+  imageUrl: `${siteRoot}/images/podcast-default.jpg`,
   author: "John Schelt, Keoni Hutton & Leslie Reed",
   copyright: `Copyright ${year} Rocky Mountain Home Haunters. All rights reserved.`,
   categories: ["Games", "Hobbies:Hobbies"],
@@ -37,9 +41,11 @@ in us every episode as we explore a topic in depth and answer questions from our
   },
   itunesCategories: [{text: "Games"}, {text: "Hobbies", subcats: ["Hobbies"]}],
   itunesType: 'episodic',
-  itunesImage: `${prefix}/images/podcast-default.jpg`
+  itunesImage: `${siteRoot}/images/podcast-default.jpg`
+  
 })
 export default {
+  siteRoot,
   getSiteData,
   getRoutes: async () => {
     const { articles, episodes, hosts, about } = await jdown('content', {parseMd: false})
@@ -51,9 +57,9 @@ export default {
       feed.addItem({
         title: item.title,
         date: item.date, 
-        link: `${prefix}/podcasts/episode/${item.slug}`,
+        link: `${siteRoot}/podcasts/episode/${item.slug}`,
         enclosure: {
-          url: `${prefix}/${item.file}`
+          url: `${siteRoot}/${item.file}`
         },
         itunesDuration: item.duration,
         itunesExplicit: false,

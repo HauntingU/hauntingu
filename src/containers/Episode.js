@@ -7,6 +7,7 @@ import Avatar from '@material-ui/core/Avatar';
 import Chip from '@material-ui/core/Chip'
 import Markdown from '../components/Markdown'
 import { withStyles } from '@material-ui/core/styles'
+import MediaPlayer from '../components/MediaPlayer.js'
 
 class Episode extends React.Component {
   constructor(props) {
@@ -26,7 +27,7 @@ class Episode extends React.Component {
             avatar={<Avatar alt={host.name} src={host.image} />}
             label={host.name}
             onClick={() => this.handleOnClick(host.slug)}
-            style={{margin: 8}}
+            style={{margin: 4}}
           />
         )
       })
@@ -37,18 +38,24 @@ class Episode extends React.Component {
   render() {
     const { episode } = this.props
     const { redirect } = this.state
+    const { title, slug, contents} = episode
+
     return redirect ? (<Redirect push to={redirect} />) : (
       <Grid item xs={12}>
         <Grid container justify="center" spacing={16}>
-          <Grid item xs={6}>
+          <Grid item xs={12} sm={10} md={8} lg={6} >
             <Typography variant="h3" gutterBottom>
-              {episode.title}
+              {title}
             </Typography>
-            <Typography variant="h5" gutterBottom>
-              Hosts
-            </Typography>
-            {this.getHostChips()}
-            <Markdown source={episode.contents}/>
+            <Grid container justify="center" style={{marginBottom: 16}}>
+              <Grid item xs={12} md={8}>
+                {this.getHostChips()}
+              </Grid>
+              <Grid item xs={12} md={8}>
+                <MediaPlayer key={slug} content={episode} defaultPlay={false} />
+              </Grid>
+            </Grid>
+            <Markdown source={contents}/>
           </Grid>
         </Grid>
       </Grid>
