@@ -4,7 +4,7 @@ title: "WCHC Wrap-Up"
 date: "2018-05-01"
 summary: "A summary of our time spent at the West Coast Haunters Convention"
 duration: "47 mins"
-image: "/images/episode-08.jpg"
+image: "/images/wchc.jpg"
 file: "/podcasts/Episode_8-WCHC_Wrapup.mp3"
 hosts:
 - keoni

@@ -48,7 +48,7 @@ export default {
   siteRoot,
   getSiteData,
   getRoutes: async () => {
-    const { articles, episodes, hosts, about } = await jdown('content', {parseMd: false})
+    const { about, articles, episodes, highlights, hosts } = await jdown('content', {parseMd: false})
     //Always sort in reverse order by slug. Slug must be numeric
     episodes.sort((a,b) => b.slug - a.slug)
 
@@ -73,7 +73,8 @@ export default {
         path: '/',
         component: 'src/containers/Home',
         getData: () => ({
-          episodes
+          episodes,
+          highlights
         }),
       },
       {

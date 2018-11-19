@@ -5,7 +5,8 @@ import logoImg from '../images/halloween-background-wide-1.jpg'
 import PodcastCard from '../components/PodcastCard'
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
-import MediaPlayer from '../components/MediaPlayer.js'
+import MediaPlayer from '../components/MediaPlayer'
+import Carousel from '../components/Carousel'
 
 const styles = theme => ({
   root: {
@@ -30,11 +31,11 @@ class Home extends React.Component {
   }
 
   render() {
-    const { episodes } = this.props
+    const { episodes, highlights } = this.props
     const { currentEpisode, defaultPlay } = this.state
     return (
       <div style={{margin: '-1rem'}}>
-        <img src={logoImg} alt="" style={{ display: 'block', width: '100%' }} />
+        <Carousel hightlights={highlights} />
         <Grid container justify="center" spacing={16} style={{padding: '1rem 0 1rem 1rem', margin: -16}}>
           <Grid item xs={12} lg={10}>
             <Grid container justify="center" spacing={16}>

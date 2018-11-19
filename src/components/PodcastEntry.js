@@ -54,10 +54,10 @@ class PodcastEntry extends React.Component {
           />
           <div className={classes.details}>
             <CardContent className={classes.content}>
-              <Typography component="h5" variant="h5">
+              <Typography variant="h5">
                 {title}
               </Typography>
-              <Typography variant="subtitle1" color="textSecondary">
+              <Typography color="textSecondary">
                 {summary}
               </Typography>
             </CardContent>
