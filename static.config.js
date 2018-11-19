@@ -5,20 +5,63 @@ import React, { Component } from 'react'
 import { SheetsRegistry } from 'react-jss/lib/jss'
 import JssProvider from 'react-jss/lib/JssProvider'
 import { MuiThemeProvider, createMuiTheme, createGenerateClassName } from '@material-ui/core/styles'
+import Podcast from 'podcast';
+import fs from 'fs';
+import theme from './src/theme'
 
 chokidar.watch('content').on('all', () => reloadRoutes())
 
-// Your Material UI Custom theme
-import theme from './src/theme'
+const date = new Date();
+const year = date.getUTCFullYear();
+const prefix = "http://localhost:3000"
+const getSiteData = () => ({
+  title: 'Haunting U',
+  description: "A podcast by home-haunters for home haunters.  Let us help you take your home based haunted house to the next level.",
+  feedUrl: `${prefix}/feed.xml` ,
+  siteUrl: `${prefix}`,
+  imageUrl: `${prefix}/images/podcast-default.jpg`,
+  author: "John Schelt, Keoni Hutton & Leslie Reed",
+  copyright: `Copyright ${year} Rocky Mountain Home Haunters. All rights reserved.`,
+  categories: ["Games", "Hobbies:Hobbies"],
+  itunesAuthor: "",
+  itunesExplicit: false,
+  itunesSubtitle: "",
+  itunesSummary: `Do you love Halloween? Do you like to scare your trick-or-treaters? Have you been looking for a way to make your house more frightening? Then this is the podcast for you!
 
+unting U is an educational and entertaining podcast for Halloween enthusiasts everywhere. We will explore all aspects of designing, building and running your own haunted attraction right from your own home. 
+
+in us every episode as we explore a topic in depth and answer questions from our listeners.`,
+  itunesOwner: {
+    name: "John Schelt, Keoni Hutton & Leslie Reed",
+    email: "dktpmn@gmail.com"
+  },
+  itunesCategories: [{text: "Games"}, {text: "Hobbies", subcats: ["Hobbies"]}],
+  itunesType: 'episodic',
+  itunesImage: `${prefix}/images/podcast-default.jpg`
+})
 export default {
-  getSiteData: () => ({
-    title: 'The Haunting U Podcast',
-  }),
+  getSiteData,
   getRoutes: async () => {
     const { articles, episodes, hosts, about } = await jdown('content', {parseMd: false})
     //Always sort in reverse order by slug. Slug must be numeric
     episodes.sort((a,b) => b.slug - a.slug)
+
+    const feed = new Podcast(getSiteData())
+    for (const item of episodes) {
+      feed.addItem({
+        title: item.title,
+        date: item.date, 
+        link: `${prefix}/podcasts/episode/${item.slug}`,
+        enclosure: {
+          url: `${prefix}/${item.file}`
+        },
+        itunesDuration: item.duration,
+        itunesExplicit: false,
+        itunesEpisode: item.slug,
+      })
+    }
+    fs.writeFileSync('./public/feed.xml', feed.buildXml())
+
     return [
       {
         path: '/',
