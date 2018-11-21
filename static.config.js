@@ -51,6 +51,7 @@ export default {
     const { about, articles, episodes, highlights, hosts } = await jdown('content', {parseMd: false})
     //Always sort in reverse order by slug. Slug must be numeric
     episodes.sort((a,b) => b.slug - a.slug)
+    hosts.sort((a,b) => a.order - b.order)
 
     const feed = new Podcast(getSiteData())
     for (const item of episodes) {

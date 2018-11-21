@@ -1,6 +1,6 @@
 ---
 slug: 14 
-title: "Decoratin Your Place of Work"
+title: "Decorating Your Place of Work"
 date: "2018-10-01"
 summary: ""
 duration: "58:45"

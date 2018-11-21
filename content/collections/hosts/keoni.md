@@ -1,4 +1,5 @@
 ---
+order: 0
 slug: keoni
 name: Keoni
 image: /images/keoni.jpg

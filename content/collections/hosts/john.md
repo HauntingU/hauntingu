@@ -1,7 +1,8 @@
 ---
+order: 2
 slug: john
 name: John
-image: /images/podcast-default.jpg
+image: /images/john.png
 ---
 Who doesn't love a pink dolphin?
  

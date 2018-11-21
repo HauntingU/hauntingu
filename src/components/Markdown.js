@@ -8,6 +8,15 @@ import HtmlToReact from 'html-to-react';
 const parser = new HtmlToReact.Parser()
 
 const styles = theme => ({
+  link: {
+    color: theme.palette.primary.main,
+    '&:visited': {
+      color: theme.palette.primary.dark
+    },
+    '&:hover': {
+      color: theme.palette.primary.light
+    }
+  },
   listItem: {
     marginTop: theme.spacing.unit,
   },
@@ -37,6 +46,10 @@ const renderers = {
 
     return <Typography {...props} gutterBottom variant={variant} />
   },
+  link: withStyles(styles)(({classes, ...props}) => {
+    console.log({classes, ...props})
+    return <a {...props} className={classes.link}/>
+  }),
   tableCell: ({children}) => {
     return (
       <td>
@@ -56,5 +69,10 @@ const renderers = {
 }
 
 export default function Markdown({children, ...props}) {
-  return [children, (<ReactMarkdown renderers={renderers} {...props} />)]
+  return (
+    <div>
+      {children}
+      <ReactMarkdown renderers={renderers} {...props} />
+    </div>
+  )
 }
