@@ -28,7 +28,7 @@ class HighlightCarousel extends React.Component {
             onClickThumb={this.onClickThumb}
           >
             {highlights.map(highlight => (
-              <img src={highlight.image} style={{objectFit: 'cover', maxHeight: 600}}/>
+              <img key={highlight.slug} src={highlight.image} style={{objectFit: 'cover', maxHeight: 600}}/>
             ))}
           </Carousel>
         </div>
