@@ -11,6 +11,8 @@ import PlayArrowIcon from '@material-ui/icons/PlayArrow';
 import PauseIcon from '@material-ui/icons/Pause';
 import SkipNextIcon from '@material-ui/icons/SkipNext';
 import LinearProgress from '@material-ui/core/LinearProgress';
+import CloudDownloadIcon from '@material-ui/icons/CloudDownload';
+
 
 const styles = theme => ({
   card: {
@@ -18,6 +20,7 @@ const styles = theme => ({
   },
   details: {
     display: 'flex',
+    flex: 1,
     flexDirection: 'column',
   },
   content: {
@@ -115,14 +118,11 @@ class MediaPlayer extends React.Component {
             <LinearProgress variant="determinate" value={completed} onClick={this.setPosition}/>
           </CardContent>
           <div className={classes.controls}>
-            <IconButton aria-label="Previous">
-              {theme.direction === 'rtl' ? <SkipNextIcon /> : <SkipPreviousIcon />}
+            <IconButton aria-label="Download" component="a" href={file} download>
+              <CloudDownloadIcon />
             </IconButton>
             <IconButton aria-label="Play/pause" onClick={this.togglePlayback}>
               <PlaybackStatus className={classes.playIcon} />
-            </IconButton>
-            <IconButton aria-label="Next">
-              {theme.direction === 'rtl' ? <SkipPreviousIcon /> : <SkipNextIcon />}
             </IconButton>
             <audio ref={this.audio} preload="metadata" autoPlay={defaultPlay}>
               <source src={file} type="audio/mp3" />

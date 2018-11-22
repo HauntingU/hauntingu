@@ -11,6 +11,7 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import PlayArrowIcon from '@material-ui/icons/PlayArrow';
+import CloudDownloadIcon from '@material-ui/icons/CloudDownload';
 
 const styles = {
   card: {
@@ -55,6 +56,9 @@ class PodcastCard extends React.Component {
           </CardContent>
         </CardActionArea>
         <CardActions>
+          <IconButton aria-label="Download" component="a" href={podcast.file} download>
+            <CloudDownloadIcon />
+          </IconButton>
           <IconButton aria-label="Play/pause" onClick={() => setEpisode(podcast)}>
             <PlayArrowIcon className={classes.playIcon} />
           </IconButton>

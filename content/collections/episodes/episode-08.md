@@ -30,18 +30,21 @@ Rosanna Munoz & Andrea Vielma
 
 ## Attribution
  
-[Music: Dance of Death](http://www.purple-planet.com/)
- 
-[Thunder: Recorded by Mark DiAngelo](http://soundbible.com/1913-Thunder-HD.html)  
+[Dance of Death](http://www.purple-planet.com/)
+
+[Thunder HD Sound](http://soundbible.com/1913-Thunder-HD.html)  
+Recorded By: Mark DiAngelo  
 Uploaded: 07.29.11  
 License: Creative Commons Attribution 3.0  
 Modifications: Inserted over Dance of Death Music
- 
-[Evil Laughter: Recorded by Himan](http://soundbible.com/2054-Evil-Laugh-Male-9.html)  
+
+[Evil Laughter](http://soundbible.com/2054-Evil-Laugh-Male-9.html)  
+Recorded By: Himan  
 Uploaded: 03.13.13  
-License: Public Domain
- 
-[Velociraptor Dinosaurs | Dinosaur Songs for Kids from Dinostory by Howdytoons |S2E04](https://www.youtube.com/watch?v=nqAvFx3NxUM)  
+License: Public Domai
+
+[Velociraptor Dinosaurs](http:////www.youtube.com/watch?v=nqAvFx3NxUM)  
+Dinosaur Songs for Kids from Dinostory by Howdytoons | S2E04  
 Uploaded: 11.24.17  
 Copyright 2017 Rock ‘n’ Rainbow Music Publishing  
 License: Standard Youtube License  
