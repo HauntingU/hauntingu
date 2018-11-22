@@ -18,15 +18,15 @@ Trapped in a dorm room, apartment or condo? Needing to work around strict Landlo
 ## Attribution
 [Dance of Death](http://www.purple-planet.com/)
 
-[Thunder HD Sound](http://soundbible.com/1913-Thunder-HD.html)
-Recorded By: Mark DiAngelo
-Uploaded: 07.29.11
-License: Creative Commons Attribution 3.0
+[Thunder HD Sound](http://soundbible.com/1913-Thunder-HD.html)  
+Recorded By: Mark DiAngelo  
+Uploaded: 07.29.11  
+License: Creative Commons Attribution 3.0  
 Modifications: Inserted over Dance of Death Music
 
-[Evil Laughter](http://soundbible.com/2054-Evil-Laugh-Male-9.html)
-Recorded By: Himan
-Uploaded: 03.13.13
+[Evil Laughter](http://soundbible.com/2054-Evil-Laugh-Male-9.html)  
+Recorded By: Himan  
+Uploaded: 03.13.13  
 License: Public Domain
 
 [Austin Powers-It looks like a giant...](https://www.youtube.com/watch?v=CpiP_jN1Pv4)  

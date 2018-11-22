@@ -13,8 +13,8 @@ chokidar.watch('content').on('all', () => reloadRoutes())
 
 const pubDate = new Date();
 const year = pubDate.getUTCFullYear();
-//const siteRoot = "https://www.hauntingu.com"
-const siteRoot = "http://localhost:3000"
+const siteRoot = "https://www.hauntingu.com"
+//const siteRoot = "http://localhost:3000"
 const getSiteData = () => ({
   title: 'Haunting U',
   pubDate
