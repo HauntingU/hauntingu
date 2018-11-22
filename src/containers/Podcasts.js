@@ -47,11 +47,13 @@ class Podcasts extends React.Component {
                           image={episode.image}
                           title={episode.title}
                         />
-                        <ListItemText
-                          primary={episode.title}
-                          secondary={episode.summary}
-                          style={{flex: 1, maxHeight: 200, overflow: 'hidden'}}
-                        />
+                        <ListItemText style={{flex: 1, maxHeight: 200, overflow: 'hidden'}}>
+                          <Typography variant="subtitle1">
+                            {episode.title}
+                          </Typography>
+                          <Typography variant="caption">(Episode {episode.slug})</Typography>
+                          <Typography color="textSecondary" variant="body1">{episode.summary}</Typography>
+                        </ListItemText>
                       </ListItem>),
                       (<Divider key="divider" inset={true} component="li" />)
                     ]
