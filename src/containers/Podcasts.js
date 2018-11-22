@@ -26,7 +26,6 @@ class Podcasts extends React.Component {
     this.setState({redirect: `/podcasts/episode/${slug}`});
   }
   cancelClick =(e) => {
-    console.log("Don't follow")
     e.stopPropagation();
   }
   render() {

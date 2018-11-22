@@ -47,7 +47,6 @@ const renderers = {
     return <Typography {...props} gutterBottom variant={variant} />
   },
   link: withStyles(styles)(({classes, ...props}) => {
-    console.log({classes, ...props})
     return <a {...props} className={classes.link}/>
   }),
   tableCell: ({children}) => {

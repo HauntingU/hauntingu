@@ -38,10 +38,6 @@ const styles = theme => ({
     paddingLeft: theme.spacing.unit,
     paddingBottom: theme.spacing.unit,
   },
-  playIcon: {
-    height: 38,
-    width: 38,
-  },
 });
 
 class MediaPlayer extends React.Component {
@@ -84,7 +80,6 @@ class MediaPlayer extends React.Component {
     if (!audio) return
     this.state.playing ? audio.pause() : audio.play();
     this.setState({ playing : !this.state.playing })
-    console.log("Playing?", this.state.playing)
   }
   setPosition = (e) => {
     const clickPos = e.clientX
@@ -119,10 +114,10 @@ class MediaPlayer extends React.Component {
           </CardContent>
           <div className={classes.controls}>
             <IconButton aria-label="Download" component="a" href={file} download>
-              <CloudDownloadIcon />
+              <CloudDownloadIcon/>
             </IconButton>
             <IconButton aria-label="Play/pause" onClick={this.togglePlayback}>
-              <PlaybackStatus className={classes.playIcon} />
+              <PlaybackStatus />
             </IconButton>
             <audio ref={this.audio} preload="metadata" autoPlay={defaultPlay}>
               <source src={file} type="audio/mp3" />

@@ -55,16 +55,18 @@ class PodcastCard extends React.Component {
             </Typography>
           </CardContent>
         </CardActionArea>
-        <CardActions>
-          <IconButton aria-label="Download" component="a" href={podcast.file} download>
-            <CloudDownloadIcon />
-          </IconButton>
-          <IconButton aria-label="Play/pause" onClick={() => setEpisode(podcast)}>
-            <PlayArrowIcon className={classes.playIcon} />
-          </IconButton>
+        <CardActions style={{position: 'relative', marginBottom: 8}}>
           <Typography color="primary">
             Episode {podcast.slug}
           </Typography>
+          <div style={{position: 'absolute', right: 8}}>
+            <IconButton aria-label="Download" component="a" href={podcast.file} style={{padding: '8px 8px', margin: 0}} download>
+              <CloudDownloadIcon />
+            </IconButton>
+            <IconButton aria-label="Play/pause" onClick={() => setEpisode(podcast)} style={{padding: '8px 8px', margin: 0}}>
+              <PlayArrowIcon className={classes.playIcon} />
+            </IconButton>
+          </div>
         </CardActions>
       </Card>
     );
